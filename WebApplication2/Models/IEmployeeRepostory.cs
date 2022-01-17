@@ -7,5 +7,7 @@ namespace WebApplication2.Models
         Employee GetEmployee(int id);
         IEnumerable<Employee> GetAllEmployee();
         Employee Add(Employee employee);
+        Employee Update(Employee employeeChanges);
+        Employee Delete(int id);
     }
 }

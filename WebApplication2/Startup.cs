@@ -30,7 +30,7 @@ namespace WebApplication2
             services.AddDbContextPool<AppDbContext>(
                 options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
             services.AddControllersWithViews();
-            services.AddSingleton<IEmployeeRepostory, MockEmployeeRepostory>();
+            services.AddScoped<IEmployeeRepostory, SQLEmployeeRepostory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
