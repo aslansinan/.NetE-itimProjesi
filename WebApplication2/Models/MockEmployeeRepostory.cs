@@ -27,7 +27,7 @@ namespace WebApplication2.Models
 
         public Employee Delete(int id)
         {
-          Employee employee = _employeeList.FirstOrDefault(e => e.Id == id)
+          Employee employee = _employeeList.FirstOrDefault(e => e.Id == id);
           if (employee != null)
             {
                 _employeeList.Remove(employee);

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "557fc249-9d56-4059-abcc-e33a7eb2e1e5": {
+      "ProjectGuid": "557fc249-9d56-4059-abcc-e33a7eb2e1e5",
+      "DisplayName": "EmployeeManangement",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c24999d8-5511-4e4d-ad6d-267a4de2cf03": {
+      "ProjectGuid": "c24999d8-5511-4e4d-ad6d-267a4de2cf03",
+      "DisplayName": "EmployeeManangement.DataAccess",
+      "ColorIndex": 1
+    },
+    "64e0e465-2556-42c8-8e88-26af705c90cb": {
+      "ProjectGuid": "64e0e465-2556-42c8-8e88-26af705c90cb",
+      "DisplayName": "EmployeeManangement.DataAccess",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

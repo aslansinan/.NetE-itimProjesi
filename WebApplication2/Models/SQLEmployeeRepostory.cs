@@ -9,7 +9,7 @@ namespace EmployeeManangement.Models
 
         public SQLEmployeeRepostory(AppDbContext context)
         {
-            this.context = context
+            this.context = context;
         }
         public Employee Add(Employee employee)
         {
