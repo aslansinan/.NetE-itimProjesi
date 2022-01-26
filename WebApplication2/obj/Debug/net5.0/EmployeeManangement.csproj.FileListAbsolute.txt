@@ -75,3 +75,7 @@ C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Home\EmployeeNotFound.cshtml.g.cs
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\nlog.config
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.Web.AspNetCore.dll

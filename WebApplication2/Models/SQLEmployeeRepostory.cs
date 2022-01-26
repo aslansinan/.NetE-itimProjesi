@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using WebApplication2.Models;
 
 namespace EmployeeManangement.Models
@@ -6,10 +7,13 @@ namespace EmployeeManangement.Models
     public class SQLEmployeeRepostory : IEmployeeRepostory
     {
         private AppDbContext context;
+        private readonly ILogger<SQLEmployeeRepostory> logger;
 
-        public SQLEmployeeRepostory(AppDbContext context)
+        public SQLEmployeeRepostory(AppDbContext context,
+                                    ILogger <SQLEmployeeRepostory> logger)
         {
             this.context = context;
+            this.logger = logger;
         }
         public Employee Add(Employee employee)
         {
@@ -36,6 +40,12 @@ namespace EmployeeManangement.Models
 
         public Employee GetEmployee(int Id)
         {
+            logger.LogTrace("Trace Log");
+            logger.LogDebug("Debug Log");
+            logger.LogInformation("Information Log");
+            logger.LogWarning("Warning Log");
+            logger.LogError("Error Log");
+            logger.LogCritical("Critical Log");
             return context.Employees.Find(Id);
         }
 

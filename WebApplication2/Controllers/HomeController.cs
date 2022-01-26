@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace WebApplication2.Controllers
 {
@@ -16,11 +17,15 @@ namespace WebApplication2.Controllers
         private readonly IEmployeeRepostory _employeeRepostory;
 
         private readonly IHostingEnvironment hostingEnvironment;
+        private readonly ILogger<HomeController> logger;
+
         public HomeController(IEmployeeRepostory employeeRepostory,
-                              IHostingEnvironment hostingEnvironment)
+                              IHostingEnvironment hostingEnvironment,
+                              ILogger<HomeController> logger)
         {
             _employeeRepostory = employeeRepostory;
             this.hostingEnvironment = hostingEnvironment;
+            this.logger = logger;
         }
 
         public ViewResult Index()
@@ -31,7 +36,13 @@ namespace WebApplication2.Controllers
         }
         public ViewResult Details(int? id)
         {
-            throw new Exception("Error in Details View");
+            //throw new Exception("Error in Details View");
+            logger.LogTrace("Trace Log");
+            logger.LogDebug("Debug Log");
+            logger.LogInformation("Information Log");
+            logger.LogWarning("Warning Log");
+            logger.LogError("Error Log");
+            logger.LogCritical("Critical Log");
             Employee employee = _employeeRepostory.GetEmployee(id ?? 1);
 
             if (employee == null)
