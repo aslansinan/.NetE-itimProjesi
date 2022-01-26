@@ -31,6 +31,13 @@ namespace WebApplication2.Controllers
         }
         public ViewResult Details(int? id)
         {
+            Employee employee = _employeeRepostory.GetEmployee(id ?? 1);
+
+            if (employee == null)
+            {
+                Response.StatusCode = 404;
+                return View("EmployeeNotFound", id);
+            }
             HomeDetailsViewModel homeDetailsViewModels = new HomeDetailsViewModel()
             {
                 Employee = _employeeRepostory.GetEmployee(id ?? 1),

@@ -42,7 +42,11 @@ namespace WebApplication2
             {
                 app.UseDeveloperExceptionPage();
             }
-           
+            else
+            {
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
+
             app.UseStaticFiles();
             app.UseRouting();
             app.UseCors();
