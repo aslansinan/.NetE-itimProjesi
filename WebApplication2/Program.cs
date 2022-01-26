@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,17 @@ namespace WebApplication2
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            Host.CreateDefaultBuilder(args) // Returns IHostBuilder
+                .ConfigureLogging((hostingContext, logging) =>
+                {
+                    logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    logging.AddConsole();
+                    logging.AddDebug();
+                    logging.AddEventSourceLogger();
+                    // Enable NLog as one of the Logging Provider
+                    logging.AddNLog();
+                })
+                .ConfigureWebHostDefaults(webBuilder => // IHostBuilder.ConfigureWebHostDefaults, returns IHostBuilder
                 {
                     webBuilder.UseStartup<Startup>();
                 });
