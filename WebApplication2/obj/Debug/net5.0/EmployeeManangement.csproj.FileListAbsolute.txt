@@ -79,3 +79,8 @@ C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.dll
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

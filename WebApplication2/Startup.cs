@@ -2,6 +2,7 @@ using EmployeeManangement.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +32,9 @@ namespace WebApplication2
             {
                 options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;");
             });
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddControllersWithViews();
             services.AddScoped<IEmployeeRepostory, SQLEmployeeRepostory>();
         }
@@ -47,8 +51,9 @@ namespace WebApplication2
                 app.UseExceptionHandler("/Error");
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
-
+            
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseRouting();
             app.UseCors();
             app.UseEndpoints(endpoints =>

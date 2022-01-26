@@ -90,7 +90,8 @@ namespace WebApplication2.Controllers
                     if(model.ExistingPhotoPath != null)
                     {
                         string filePath = Path.Combine(hostingEnvironment.WebRootPath, "images", model.ExistingPhotoPath);
-                        System.IO.File.Delete(filePath);
+                        if (System.IO.File.Exists(filePath))
+                            System.IO.File.Delete(filePath);
                     }
                    employee.PhotoPath = ProcessUploadedFile(model);
                 }
@@ -132,7 +133,7 @@ namespace WebApplication2.Controllers
                     PhotoPath = uniqueFileName,
 
                 };
-                _employeeRepostory.Add(newEmployee);
+                newEmployee = _employeeRepostory.Add(newEmployee);
                 return RedirectToAction("details",new{id=newEmployee.Id});
             }
             return View();
