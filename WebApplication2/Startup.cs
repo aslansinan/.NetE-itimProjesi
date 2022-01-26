@@ -32,7 +32,12 @@ namespace WebApplication2
             {
                 options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;");
             });
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 7;
+                options.Password.RequiredUniqueChars = 3;
+                options.Password.RequireNonAlphanumeric = false;
+            })
                 .AddEntityFrameworkStores<AppDbContext>();
 
             services.AddControllersWithViews();
