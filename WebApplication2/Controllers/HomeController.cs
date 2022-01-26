@@ -31,6 +31,7 @@ namespace WebApplication2.Controllers
         }
         public ViewResult Details(int? id)
         {
+            throw new Exception("Error in Details View");
             Employee employee = _employeeRepostory.GetEmployee(id ?? 1);
 
             if (employee == null)

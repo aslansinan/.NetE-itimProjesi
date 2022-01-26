@@ -44,6 +44,7 @@ namespace WebApplication2
             }
             else
             {
+                app.UseExceptionHandler("/Error");
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
 
