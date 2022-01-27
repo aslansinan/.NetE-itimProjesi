@@ -40,7 +40,7 @@ namespace WebApplication2
             {
                 options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;");
             });
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 7;
                 options.Password.RequiredUniqueChars = 3;
