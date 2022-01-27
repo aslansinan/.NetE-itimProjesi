@@ -91,3 +91,4 @@ C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Administration\EditRole.cshtml.g.cs
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Administration\EditUsersInRole.cshtml.g.cs
 C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\Sinan\source\repos\EmployeeManangement\WebApplication2\obj\Debug\net5.0\Razor\Views\Administration\ListUsers.cshtml.g.cs
