@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebApplication2.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly IEmployeeRepostory _employeeRepostory;

@@ -1,4 +1,5 @@
 ﻿using EmployeeManangement.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -16,12 +17,23 @@ namespace EmployeeManangement.Controllers
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("index", "home");
+        }
+
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
+
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -37,6 +49,29 @@ namespace EmployeeManangement.Controllers
                 {
                     ModelState.AddModelError("", error.Description);
                 }
+            }
+            return View(model);
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await signInManager.PasswordSignInAsync(model.Email,model.Password,
+                                                                    model.RememberMe,false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("index", "home");
+                }  
+                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");   
             }
             return View(model);
         }
