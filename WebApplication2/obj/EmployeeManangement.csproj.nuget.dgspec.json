@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[5.0.13, )"
             },
+            "Microsoft.Web.LibraryManager.Build": {
+              "target": "Package",
+              "version": "[2.1.161, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.14.0, )"
