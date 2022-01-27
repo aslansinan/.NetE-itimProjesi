@@ -38,7 +38,7 @@ namespace WebApplication2
             });
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;");
+                options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;MultipleActiveResultSets=true");
             });
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
