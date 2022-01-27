@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManangement.Controllers
 {
-    [Authorize(Roles ="Admin,User")]
+    [Authorize(Roles = "Admin")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -190,6 +190,6 @@ namespace EmployeeManangement.Controllers
             }
 
             return RedirectToAction("EditRole", new { Id = roleId });
-        }
+        }  
     }
 }

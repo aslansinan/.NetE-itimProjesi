@@ -30,12 +30,7 @@ namespace WebApplication2
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(config => {
-                var policy = new AuthorizationPolicyBuilder()
-                                .RequireAuthenticatedUser()
-                                .Build();
-                config.Filters.Add(new AuthorizeFilter(policy));
-            });
+           
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer("Data Source=.;Initial Catalog=CoreBlogDb2;integrated security=true;MultipleActiveResultSets=true");
@@ -64,10 +59,11 @@ namespace WebApplication2
                 app.UseExceptionHandler("/Error");
                 app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
-            
+           
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseRouting();
+            app.UseAuthorization();
             app.UseCors();
             app.UseEndpoints(endpoints =>
             {
