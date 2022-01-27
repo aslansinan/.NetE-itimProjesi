@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EmployeeManangement.Utilities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,6 +13,8 @@ namespace EmployeeManangement.ViewModels
         [Required]
         [EmailAddress]
         [Remote(action: "IsEmailInUse",controller:"Account")]
+        [ValidEmailDomain(allowedDomain:"sinan.com",
+            ErrorMessage ="Email domain must be sinan.com")]
         public string Email { get; set; }
 
         [Required]
