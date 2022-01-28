@@ -1,4 +1,5 @@
 using EmployeeManangement.Models;
+using EmployeeManangement.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,12 +45,17 @@ namespace WebApplication2
                 .AddEntityFrameworkStores<AppDbContext>();
 
             services.AddControllersWithViews();
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("DeleteRolePolicy",
                     policy => policy.RequireClaim("Delete Role"));
-            });
+                options.AddPolicy("EditRolePolicy", policy =>
+               policy.AddRequirements(new ManageAdminRolesAndClaimsRequirement()));
+                });
             services.AddScoped<IEmployeeRepostory, SQLEmployeeRepostory>();
+            services.AddSingleton<IAuthorizationHandler, CanEditOnlyOtherAdminRolesAndClaimsHandler>();
+            services.AddSingleton<IAuthorizationHandler, SuperAdminHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
