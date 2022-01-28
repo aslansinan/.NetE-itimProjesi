@@ -42,7 +42,7 @@
             <a asp-action="ListUsers" class="btn btn-primary">Cancel</a>
         </div>
     </div>
-
+    
     <div class="card">
         <div class="card-header">
             <h3>User Roles</h3>
@@ -61,7 +61,7 @@
             }
         </div>
         <div class="card-footer">
-            <a href="#" style="width:auto" class="btn btn-primary">
+            <a asp-controller="Administration" asp-action="ManageUserRoles" asp-route-userId="@Model.Id" style="width:auto" class="btn btn-primary">
                 Manage Roles
             </a>
         </div>
