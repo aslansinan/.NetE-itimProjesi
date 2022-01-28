@@ -44,6 +44,11 @@ namespace WebApplication2
                 .AddEntityFrameworkStores<AppDbContext>();
 
             services.AddControllersWithViews();
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("DeleteRolePolicy",
+                    policy => policy.RequireClaim("Delete Role"));
+            });
             services.AddScoped<IEmployeeRepostory, SQLEmployeeRepostory>();
         }
 
