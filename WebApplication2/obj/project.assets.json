@@ -6209,19 +6209,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sinan\\.nuget\\packages\\": {}
+    "C:\\Users\\sinan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan\\source\\repos\\EmployeeManangement\\WebApplication2\\EmployeeManangement.csproj",
+      "projectUniqueName": "C:\\Users\\sinan\\Desktop\\.NetE-itimProjesi\\WebApplication2\\EmployeeManangement.csproj",
       "projectName": "EmployeeManangement",
-      "projectPath": "C:\\Users\\Sinan\\source\\repos\\EmployeeManangement\\WebApplication2\\EmployeeManangement.csproj",
-      "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan\\source\\repos\\EmployeeManangement\\WebApplication2\\obj\\",
+      "projectPath": "C:\\Users\\sinan\\Desktop\\.NetE-itimProjesi\\WebApplication2\\EmployeeManangement.csproj",
+      "packagesPath": "C:\\Users\\sinan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sinan\\Desktop\\.NetE-itimProjesi\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6288,7 +6288,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
